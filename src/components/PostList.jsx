@@ -10,7 +10,7 @@ export default function PostList({ isPosting, onStopPosting }) {
   const [posts, setPosts] = useState([]);
 
   function addPostHandler(postData) {
-    setPosts((existingPosts) => [postData, ...existingPosts]);
+    setPosts((existingPosts) => [...existingPosts, postData]);
   }
 
   return (
@@ -22,7 +22,9 @@ export default function PostList({ isPosting, onStopPosting }) {
       )}
 
       <ul className={classes.posts}>
-        <Post author="Random" body="You're awesome" />
+        {posts.map((post,index) => (
+          <Post key={index} author={post.author} body={post.body}/>
+        ))}
       </ul>
     </>
   );
