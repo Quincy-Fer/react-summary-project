@@ -21,6 +21,7 @@
   margin: 0.25rem 0 0 0;
   color: #593884;
   font-style: italic;
+  max-width: 65ch;
 }
 
 .overflow {
@@ -28,6 +29,18 @@
   flex-direction: row;
   flex-shrink: 1;
 }
+
+.iconwrapper {
+  display: flex;
+  justify-content: end;
+  margin: 0.25rem;  
+}
+
+.icon {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
 
 
 @keyframes animate-in {
