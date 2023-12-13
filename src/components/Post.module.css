@@ -33,15 +33,12 @@
 .iconwrapper {
   display: flex;
   justify-content: end;
-  margin: 0.25rem;  
 }
 
 .icon {
   width: 1.3rem;
   height: 1.3rem;
 }
-
-
 
 @keyframes animate-in {
   from {
