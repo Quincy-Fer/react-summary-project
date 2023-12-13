@@ -21,13 +21,15 @@
   margin: 0.25rem 0 0 0;
   color: #593884;
   font-style: italic;
-  max-width: 65ch;
+  
 }
 
 .overflow {
   display: flex;
   flex-direction: row;
   flex-shrink: 1;
+  max-width: 20ch;
+  gap: 10px;
 }
 
 .iconwrapper {

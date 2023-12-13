@@ -13,6 +13,14 @@ export default function PostList({ isPosting, onStopPosting }) {
     setPosts((existingPosts) => [...existingPosts, postData]);
   }
 
+  function deletePostHandler(id) {
+    setPosts((existingPosts) => {
+      return existingPosts.filter((item, index) => {
+        return index !== id;
+      });
+    });
+  }
+
   return (
     <>
       {isPosting && (
@@ -23,14 +31,20 @@ export default function PostList({ isPosting, onStopPosting }) {
       {posts.length > 0 && (
         <ul className={classes.posts}>
           {posts.map((post, index) => (
-            <Post key={index} author={post.author} body={post.body} />
+            <Post
+              id={index}
+              key={index}
+              author={post.author}
+              body={post.body}
+              onDeletePost={deletePostHandler}
+            />
           ))}
         </ul>
       )}
       {posts.length === 0 && (
         <div className={classes.noposts}>
           <h2>There are no notes yet &#128517;</h2>
-          <p>Click New Note to add some! </p>
+          <p>Click New Post to add some! </p>
         </div>
       )}
     </>
