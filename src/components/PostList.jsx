@@ -20,12 +20,19 @@ export default function PostList({ isPosting, onStopPosting }) {
           <NewPost onCancel={onStopPosting} onAddPost={addPostHandler} />
         </Modal>
       )}
-
-      <ul className={classes.posts}>
-        {posts.map((post,index) => (
-          <Post key={index} author={post.author} body={post.body}/>
-        ))}
-      </ul>
+      {posts.length > 0 && (
+        <ul className={classes.posts}>
+          {posts.map((post, index) => (
+            <Post key={index} author={post.author} body={post.body} />
+          ))}
+        </ul>
+      )}
+      {posts.length === 0 && (
+        <div className={classes.noposts}>
+          <h2>There are no notes yet &#128517;</h2>
+          <p>Click New Note to add some! </p>
+        </div>
+      )}
     </>
   );
 }

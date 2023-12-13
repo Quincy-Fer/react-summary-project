@@ -12,7 +12,7 @@ function MainHeader({ onCreatePost }) {
       <p>
         <button className={classes.button} onClick={onCreatePost}>
           <MdPostAdd size={18} />
-          New Post
+          New Note
         </button>
       </p>
     </header>
