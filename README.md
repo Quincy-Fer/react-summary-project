@@ -4,10 +4,10 @@ Jotting is used to jot down quick personal snippets for later use. It was made a
 
 # Tech Stack 
 
--Vite: build-tool
--React.js : Framework
--Javascript : Language
--css.modules : styling
+*Vite build-tool
+*React.js : Framework
+*Javascript : Language
+*css.modules : styling
 
 # Getting Started 
 
